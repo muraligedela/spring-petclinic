@@ -10,5 +10,10 @@ node('Maven'){
     stage ('building the package') {
      sh 'mvn clean package'
 }
-    
+    stage ('zipping the file'){
+    archiveArtifacts 'target/*.zip'
+} 
+    stage ('sharing the file'){
+    junit 'target/surefire-reports/*.xml' 
+}
 }
