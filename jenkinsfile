@@ -2,12 +2,13 @@ node('Maven'){
     stage ('building the code'){
         echo 'welcome to spring pet clinic'
   
-    }
+}
     stage ('git clone') {
     git 'https://github.com/muraligedela/spring-petclinic.git'
-    }
+}
+
     stage ('building the package') {
      sh 'Maven clean package'
-    }
-    }
+}
+    
 }
