@@ -1,0 +1,5 @@
+node('Maven'){
+    stage ('building the code'){
+        echo 'welcome to spring pet clinic'
+    }
+}
