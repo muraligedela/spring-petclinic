@@ -8,7 +8,7 @@ node('Maven'){
 }
 
     stage ('building the package') {
-     sh 'Maven clean package'
+     sh 'mvn clean package'
 }
     
 }
